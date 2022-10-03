@@ -1,0 +1,98 @@
+running build
+running config_cc
+unifing config_cc, config, build_clib, build_ext, build commands --compiler options
+running config_fc
+unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
+running build_src
+build_src
+building extension "displacements_to_strains" sources
+f2py options: []
+f2py:> C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9\displacements_to_strainsmodule.c
+creating C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9
+Reading fortran codes...
+	Reading file 'displacements_to_strains.f90' (format:free)
+Post-processing...
+	Block: displacements_to_strains
+			Block: displacements_to_strains
+			Block: update_lagrangian_hughes_winget
+			Block: update_lagrangian
+			Block: total_lagrangian
+			Block: element_quad4_total_lagrangian
+			Block: element_quad4_updated_lagrangian
+			Block: gauss_jordan
+			Block: fdeterm2
+			Block: polar_decomposition
+			Block: spectral_decomposition
+			Block: jacobi
+Post-processing (stage 2)...
+Building modules...
+	Building module "displacements_to_strains"...
+		Constructing wrapper function "displacements_to_strains"...
+		  strain,dfgrd,indfgrd,detdfgrd,rot,area = displacements_to_strains(nelems,nodpelem,incmax,nnodes,elems,nodes,displ,flag)
+		Constructing wrapper function "update_lagrangian_hughes_winget"...
+		  update_lagrangian_hughes_winget(displ,ident,elems,nodes,flag,dfgrd,rot,indfgrd,strain,detdfgrd,area,[incmax,nelems,nodpelem,nnodes])
+		Constructing wrapper function "update_lagrangian"...
+		  update_lagrangian(displ,ident,elems,nodes,flag,dfgrd,rot,indfgrd,strain,detdfgrd,area,[incmax,nelems,nodpelem,nnodes])
+		Constructing wrapper function "total_lagrangian"...
+		  total_lagrangian(displ,ident,elems,nodes,flag,dfgrd,rot,indfgrd,strain,detdfgrd,area,[incmax,nelems,nodpelem,nnodes])
+		Constructing wrapper function "element_quad4_total_lagrangian"...
+		  element_quad4_total_lagrangian(nel,nodes,elems,ldispl,dudx,area,[nnodes,nelems,nodpelem])
+		Constructing wrapper function "element_quad4_updated_lagrangian"...
+		  element_quad4_updated_lagrangian(nel,nodes,elems,ldispl,ldisplu,dudx,area,[nnodes,nelems,nodpelem])
+		Constructing wrapper function "gauss_jordan"...
+		  gauss_jordan(a,b,ierr,[n])
+		Creating wrapper for Fortran function "fdeterm2"("fdeterm2")...
+		Constructing wrapper function "fdeterm2"...
+		  deter = fdeterm2(amatr)
+		Constructing wrapper function "polar_decomposition"...
+		  polar_decomposition(f,mrot,auxstrain)
+		Constructing wrapper function "spectral_decomposition"...
+		  spectral_decomposition(eigprj,eigx,repeat,x)
+		Constructing wrapper function "jacobi"...
+		  jacobi(a,d,v,[n])
+	Wrote C/API module "displacements_to_strains" to file "C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9\displacements_to_strainsmodule.c"
+	Fortran 77 wrappers are saved to "C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9\displacements_to_strains-f2pywrappers.f"
+  adding 'C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9\fortranobject.c' to sources.
+  adding 'C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9' to include_dirs.
+copying C:\Users\Miguel\miniconda3\lib\site-packages\numpy\f2py\src\fortranobject.c -> C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9
+copying C:\Users\Miguel\miniconda3\lib\site-packages\numpy\f2py\src\fortranobject.h -> C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9
+  adding 'C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9\displacements_to_strains-f2pywrappers.f' to sources.
+build_src: building npy-pkg config files
+running build_ext
+No module named 'numpy.distutils._msvccompiler' in numpy.distutils; trying from distutils
+customize MSVCCompiler
+customize MSVCCompiler using build_ext
+customize IntelEM64VisualFCompiler
+Found executable C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\bin\intel64\ifort.exe
+Could not locate executable C:\Program
+customize IntelEM64VisualFCompiler using build_ext
+building 'displacements_to_strains' extension
+compiling C sources
+creating C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\Release\Users
+creating C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\Release\Users\Miguel
+creating C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\Release\Users\Miguel\AppData
+creating C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\Release\Users\Miguel\AppData\Local
+creating C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\Release\Users\Miguel\AppData\Local\Temp
+creating C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\Release\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l
+creating C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\Release\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9
+C:\Program Files (x86)\Microsoft Visual Studio\VC\BIN\x86_amd64\cl.exe /c /nologo /Ox /W3 /GL /DNDEBUG /MD -DNPY_DISABLE_OPTIMIZATION=1 -IC:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9 -IC:\Users\Miguel\miniconda3\lib\site-packages\numpy\core\include -IC:\Users\Miguel\miniconda3\include -IC:\Users\Miguel\miniconda3\include -IC:\Program Files (x86)\Microsoft Visual Studio\VC\INCLUDE -IC:\Program Files (x86)\Microsoft Visual Studio\VC\ATLMFC\INCLUDE -IC:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt -IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um -IC:\Program Files (x86)\Windows Kits\8.1\include\\shared -IC:\Program Files (x86)\Windows Kits\8.1\include\\um -IC:\Program Files (x86)\Windows Kits\8.1\include\\winrt -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\compiler\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\compiler\include\intel64 -IC:\Program Files (x86)\Microsoft Visual Studio\VC\INCLUDE -IC:\Program Files (x86)\Microsoft Visual Studio\VC\ATLMFC\INCLUDE -IC:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt -IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um -IC:\Program Files (x86)\Windows Kits\8.1\include\\shared -IC:\Program Files (x86)\Windows Kits\8.1\include\\um -IC:\Program Files (x86)\Windows Kits\8.1\include\\winrt -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\mpi\intel64\bin\..\..\intel64\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\ipp\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\mkl\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\pstl\bin\..\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\tbb\bin\..\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\tbb\bin\..\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\daal\include -IC:\Program Files (x86)\Microsoft Visual Studio\VC\INCLUDE -IC:\Program Files (x86)\Microsoft Visual Studio\VC\ATLMFC\INCLUDE -IC:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt -IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um -IC:\Program Files (x86)\Windows Kits\8.1\include\\shared -IC:\Program Files (x86)\Windows Kits\8.1\include\\um -IC:\Program Files (x86)\Windows Kits\8.1\include\\winrt -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\compiler\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\compiler\include\intel64 -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\mpi\intel64\bin\..\..\intel64\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\ipp\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\mkl\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\pstl\bin\..\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\tbb\bin\..\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\daal\include /TcC:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9\displacements_to_strainsmodule.c /FoC:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\Release\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9\displacements_to_strainsmodule.obj
+C:\Program Files (x86)\Microsoft Visual Studio\VC\BIN\x86_amd64\cl.exe /c /nologo /Ox /W3 /GL /DNDEBUG /MD -DNPY_DISABLE_OPTIMIZATION=1 -IC:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9 -IC:\Users\Miguel\miniconda3\lib\site-packages\numpy\core\include -IC:\Users\Miguel\miniconda3\include -IC:\Users\Miguel\miniconda3\include -IC:\Program Files (x86)\Microsoft Visual Studio\VC\INCLUDE -IC:\Program Files (x86)\Microsoft Visual Studio\VC\ATLMFC\INCLUDE -IC:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt -IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um -IC:\Program Files (x86)\Windows Kits\8.1\include\\shared -IC:\Program Files (x86)\Windows Kits\8.1\include\\um -IC:\Program Files (x86)\Windows Kits\8.1\include\\winrt -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\compiler\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\compiler\include\intel64 -IC:\Program Files (x86)\Microsoft Visual Studio\VC\INCLUDE -IC:\Program Files (x86)\Microsoft Visual Studio\VC\ATLMFC\INCLUDE -IC:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt -IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um -IC:\Program Files (x86)\Windows Kits\8.1\include\\shared -IC:\Program Files (x86)\Windows Kits\8.1\include\\um -IC:\Program Files (x86)\Windows Kits\8.1\include\\winrt -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\mpi\intel64\bin\..\..\intel64\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\ipp\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\mkl\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\pstl\bin\..\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\tbb\bin\..\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\tbb\bin\..\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\daal\include -IC:\Program Files (x86)\Microsoft Visual Studio\VC\INCLUDE -IC:\Program Files (x86)\Microsoft Visual Studio\VC\ATLMFC\INCLUDE -IC:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt -IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um -IC:\Program Files (x86)\Windows Kits\8.1\include\\shared -IC:\Program Files (x86)\Windows Kits\8.1\include\\um -IC:\Program Files (x86)\Windows Kits\8.1\include\\winrt -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\compiler\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\compiler\include\intel64 -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\mpi\intel64\bin\..\..\intel64\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\ipp\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\mkl\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\pstl\bin\..\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\tbb\bin\..\include -IC:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\daal\include /TcC:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9\fortranobject.c /FoC:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\Release\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9\fortranobject.obj
+compiling Fortran sources
+Fortran f77 compiler: C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\bin\intel64\ifort.exe Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\bin\intel64\ifort.exe /nologo /MD /nbs /names:lowercase /assume:underscore /heap-arrays:0
+Fortran f90 compiler: C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\bin\intel64\ifort.exe Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\bin\intel64\ifort.exe /nologo /MD /nbs /names:lowercase /assume:underscore /heap-arrays:0
+Fortran fix compiler: C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\bin\intel64\ifort.exe Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\bin\intel64\ifort.exe /nologo /MD /nbs /names:lowercase /assume:underscore /heap-arrays:0
+compile options: '-IC:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9 -IC:\Users\Miguel\miniconda3\lib\site-packages\numpy\core\include -IC:\Users\Miguel\miniconda3\include -IC:\Users\Miguel\miniconda3\include -c'
+ifort.exe:f90: displacements_to_strains.f90
+ifort: command line warning #10161: unrecognized source type 'Files'; object file assumed
+ifort: command line warning #10161: unrecognized source type '(x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\bin\intel64\ifort.exe'; object file assumed
+ifort: command line warning #10006: ignoring unknown option '/c '
+ifort: warning #10145: no action performed for file 'Files'
+ifort: warning #10145: no action performed for file '(x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\bin\intel64\ifort.exe'
+ifort.exe:f77: C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9\displacements_to_strains-f2pywrappers.f
+ifort: command line warning #10161: unrecognized source type 'Files'; object file assumed
+ifort: command line warning #10161: unrecognized source type '(x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\bin\intel64\ifort.exe'; object file assumed
+ifort: command line warning #10006: ignoring unknown option '/c '
+ifort: warning #10145: no action performed for file 'Files'
+ifort: warning #10145: no action performed for file '(x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\bin\intel64\ifort.exe'
+C:\Program Files (x86)\Microsoft Visual Studio\VC\BIN\x86_amd64\link.exe /nologo /INCREMENTAL:NO /LTCG /DLL /MANIFEST:EMBED,ID=2 /MANIFESTUAC:NO /LIBPATH:C:\Users\Miguel\miniconda3\libs /LIBPATH:C:\Users\Miguel\miniconda3\PCbuild\amd64 /LIBPATH:C:\Users\Miguel\miniconda3\libs /LIBPATH:C:\Users\Miguel\miniconda3\PCbuild\amd64 /LIBPATH:C:\Program Files (x86)\Microsoft Visual Studio\VC\LIB\amd64 /LIBPATH:C:\Program Files (x86)\Microsoft Visual Studio\VC\ATLMFC\LIB\amd64 /LIBPATH:C:\Program Files (x86)\Windows Kits\10\lib\10.0.10240.0\ucrt\x64 /LIBPATH:C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\lib\um\x64 /LIBPATH:C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64 /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\compiler\lib /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\compiler\lib\intel64 /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\compiler\lib\intel64_win /LIBPATH:C:\Program Files (x86)\Microsoft Visual Studio\VC\LIB\amd64 /LIBPATH:C:\Program Files (x86)\Microsoft Visual Studio\VC\ATLMFC\LIB\amd64 /LIBPATH:C:\Program Files (x86)\Windows Kits\10\lib\10.0.10240.0\ucrt\x64 /LIBPATH:C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\lib\um\x64 /LIBPATH:C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64 /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\mpi\intel64\bin\..\..\intel64\lib /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\ipp\lib\intel64 /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\mkl\lib\intel64_win /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\compiler\lib\intel64_win /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\tbb\bin\..\lib\intel64\vc_mt /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\tbb\bin\..\lib\intel64\vc_mt /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\daal\lib\intel64_win /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\tbb\lib\intel64_win\vc_mt /LIBPATH:C:\Program Files (x86)\Microsoft Visual Studio\VC\LIB\amd64 /LIBPATH:C:\Program Files (x86)\Microsoft Visual Studio\VC\ATLMFC\LIB\amd64 /LIBPATH:C:\Program Files (x86)\Windows Kits\10\lib\10.0.10240.0\ucrt\x64 /LIBPATH:C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\lib\um\x64 /LIBPATH:C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64 /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\compiler\lib /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\compiler\lib\intel64 /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\compiler\lib\intel64_win /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\mpi\intel64\bin\..\..\intel64\lib /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\ipp\lib\intel64 /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\mkl\lib\intel64_win /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\tbb\bin\..\lib\intel64\vc_mt /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\daal\lib\intel64_win /LIBPATH:C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2018.5.274\windows\tbb\lib\intel64_win\vc_mt /EXPORT:PyInit_displacements_to_strains C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\Release\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9\displacements_to_strainsmodule.obj C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\Release\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9\fortranobject.obj C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\Release\displacements_to_strains.o C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\Release\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9\displacements_to_strains-f2pywrappers.o /OUT:.\displacements_to_strains.cp39-win_amd64.pyd /IMPLIB:C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\Release\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l\src.win-amd64-3.9\displacements_to_strains.cp39-win_amd64.lib
+Removing build directory C:\Users\Miguel\AppData\Local\Temp\tmpsqqd0x4l

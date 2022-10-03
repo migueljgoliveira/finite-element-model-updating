@@ -1,0 +1,50 @@
+/*
+/* INFO
+/*
+*Info
+/*
+*Calibration
+**Simulation
+**Sensitivity
+**
+*Tests, num=3
+ TestA, TestB, TestC
+ 1.0, 1.0, 1.0
+/*
+*End Info
+**
+** METHOD
+**
+*Method
+ 1
+**
+*FEMU, weight=1.0, norm=true, residual=2, cpus=2
+**
+*VFM, weight=1.0, norm=false, virtualfields=automatic
+**
+*End Method
+**
+** OPTIMISATION
+**
+*Optimisation, type=1, parallel=true
+**
+*DE, strategy=best1bin, disp=true, polish=false, updating=immediate, init=latinhypercube, workers=1
+ 10,1000    		** popsize,maxiter
+ 0.5,0.7    		** mutation,recombination
+ 1e-8,1e-15 		** tol,atol
+ 1	    		** workers
+**
+*DA
+ 1000,1e7   		** maxiter,maxfunc
+ 5230.0,2e-5,2.62,-5.0  ** initial_temp,restart_temp_ratio,visit,accept
+**
+*LS, method=lm, jac=2-point, x_scale=jac, loss=linear, sets=10, multi=lhs, bounds=true
+ 1000			** maxnfev
+ 1e-3			** diff_step
+ 1e-8,1e-8,1e-8		** ftol,xtol,gtol
+ 
+*MINI, method=nelder-mead, jac=none, hess=none, hessp=none, adaptive=true, sets=10, multi=lhs, bounds=true
+ 100000  		** maxfev
+ 1e-8,1e-8              ** xatol,ftol
+
+*End Optimisation
