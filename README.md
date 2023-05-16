@@ -1,5 +1,4 @@
-# ParamID-2.0
- PARAMeter IDentification 2.0
+# Finite Element Model Updating (FEMU)
 
 ## Input
 
